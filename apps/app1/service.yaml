@@ -1,0 +1,15 @@
+# service.yaml for nginx alpine
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-alpine
+  namespace: default
+  labels:
+    app: nginx-alpine
+spec:
+  selector:
+    app: nginx-alpine
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
