@@ -1,23 +1,23 @@
-# deployment.yaml for nginx alpine
+# deployment.yaml for apache httpd
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-alpine
+  name: apache-httpd
   labels:
-    app: nginx-alpine
+    app: apache-httpd
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx-alpine
+      app: apache-httpd
   template:
     metadata:
       labels:
-        app: nginx-alpine
+        app: apache-httpd
     spec:
       containers:
-        - name: nginx-alpine
-          image: nginx:alpine
+        - name: apache-httpd
+          image: httpd:latest
           ports:
             - containerPort: 80
           resources:
