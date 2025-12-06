@@ -1,0 +1,16 @@
+# deployment.yaml for nginx alpine
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-alpine
+  labels:
+    app: nginx-alpine
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-alpine
+  template:
+    metadata:
+      labels:
+        app: nginx-alpine
