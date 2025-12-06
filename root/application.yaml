@@ -26,3 +26,6 @@ spec:
     repoURL: git@github.com:renatoruis/gitops.git
     targetRevision: master
     path: apps/app2
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
