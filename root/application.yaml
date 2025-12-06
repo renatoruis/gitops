@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: git@github.com:renatoruis/gitops.git
     targetRevision: HEAD
-    path: app1
+    path: apps/app1
   destination:
     server: https://kubernetes.default.svc
     namespace: default
